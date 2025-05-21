@@ -22,4 +22,4 @@ jobs:
       - name: Test for vulnerabilities
         run: snyk test
       - name: Test Dockerfile for vulnerabilities
-        run: snyk container test <ruta/a/tu/Dockerfile>
+        run: snyk container test Dockerfile
