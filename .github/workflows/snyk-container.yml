@@ -20,6 +20,8 @@ jobs:
       - name: Authenticate Snyk
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
       - name: Test for vulnerabilities
-        run: snyk test
+        run: |
+          cd path/to/project-directory
+          snyk test
       - name: Test Dockerfile for vulnerabilities
         run: snyk container test Dockerfile
