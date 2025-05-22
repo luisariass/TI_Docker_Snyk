@@ -19,5 +19,7 @@ jobs:
         run: npm install -g snyk
       - name: Authenticate Snyk
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
-      - name: Test Dockerfile for vulnerabilities
-        run: snyk container test Dockerfile
+      - name: Build Docker image
+        run: docker build -t my-app:latest .
+      - name: Test Docker image for vulnerabilities
+        run: snyk container test my-app:latest
