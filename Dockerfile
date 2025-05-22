@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:14.21.3-bullseye-slim
+FROM node:24.0.2-bullseye-slim
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
